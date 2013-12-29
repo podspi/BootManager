@@ -53,8 +53,7 @@ public class UITweaks extends PreferenceActivity {
 	    int pixels = (int) (45 * scale + 0.5f);
 	    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colord.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 	    actionBar.setBackgroundDrawable(mDrawable);
-	    actionBar.setHomeColor(colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));	    
+	  	    
 		
 		Preference topbarStartPref = (Preference) findPreference("uitopBarPref");
 		topbarStartPref.setOnPreferenceClickListener(new OnPreferenceClickListener() { 
@@ -69,7 +68,7 @@ public class UITweaks extends PreferenceActivity {
 					    int pixels = (int) (45 * scale + 0.5f);
 					    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colord.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 					    actionBar.setBackgroundDrawable(mDrawable);
-					    actionBar.setHomeColor(colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+					   
 					}
 			                
 					@Override
@@ -95,7 +94,7 @@ public class UITweaks extends PreferenceActivity {
 					    int pixels = (int) (45 * scale + 0.5f);
 					    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colord.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 					    actionBar.setBackgroundDrawable(mDrawable);
-					    actionBar.setHomeColor(colord.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+					  
 					}
 			                
 					@Override
@@ -116,7 +115,7 @@ public class UITweaks extends PreferenceActivity {
 					public void onOk(AmbilWarnaDialog dialog, int color) {
 						editor.putInt("actionbarText", color);
 						editor.commit();
-						actionBar.setTitleColor(color);
+						
 					}
 
 					@Override

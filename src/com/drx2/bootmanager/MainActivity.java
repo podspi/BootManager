@@ -345,7 +345,7 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 		    int pixels = (int) (45 * scale + 0.5f);
 		    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 		    actionBar.setBackgroundDrawable(mDrawable);
-		    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+		   
 	    }
 	}
 	
@@ -366,7 +366,7 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 		    int pixels = (int) (45 * scale + 0.5f);
 		    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 		    actionBar.setBackgroundDrawable(mDrawable);
-		    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+		    
 	    }
 	}
 	
@@ -420,20 +420,20 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 	  		mViewPager.setCurrentItem(0);
 			ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}else if(Page.equals("extras")){
 	  		mViewPager.setCurrentItem(header.size());
 			ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 			setupActionbarclick();
 	  	}else{
 	  		fragNum(current_page);
 	  		mViewPager.setCurrentItem(current_page);
 	  		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}
 	    ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
@@ -446,11 +446,11 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 	    actionBar.removeAllActions();
 	    setupActionbarclick();
 	    if(!(current_page == header.size())){
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    }else{
-	    	actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    }
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+	    
 	    
 	}
 	
@@ -465,7 +465,7 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 	    int pixels = (int) (45 * scale + 0.5f);
 	    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 	    actionBar.setBackgroundDrawable(mDrawable);
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+	    
 	    SharedPreferences settings = getSharedPreferences(PREFS_DEVICE, 0);
 		board=settings.getString("device", "");
 	    if(board.equals("tuna")){
@@ -596,17 +596,17 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 		if(Page.equals("phone")){
 	  		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}else if(Page.equals("extras")){
 	  		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 			setupActionbarclick();
 	  	}else {
 	  		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}
 		
@@ -676,20 +676,20 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 	  		mViewPager.setCurrentItem(0);
 			ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}else if(current_page+1 >= header.size()){
 	  		mViewPager.setCurrentItem(header.size());
 			ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 			setupActionbarclick();
 	  	}else{
 	  		fragNum(current_page);
 	  		mViewPager.setCurrentItem(current_page);
 	  		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 			actionBar.removeAllActions();
-	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
+	    	actionBar.addAction(new SetupPR(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));
 	    	setupActionbarclick();
 	  	}
 		ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
@@ -699,7 +699,7 @@ public class MainActivity extends FragmentActivity implements PageChangeListener
 	    int pixels = (int) (45 * scale + 0.5f);
 	    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 	    actionBar.setBackgroundDrawable(mDrawable);
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+	   
 	}
 	
 	private class checkhijack extends Thread {

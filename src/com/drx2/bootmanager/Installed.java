@@ -10,6 +10,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipException;
 import java.util.zip.ZipFile;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -81,7 +82,7 @@ public class Installed extends ListActivity {
 	static boolean wipedata = false;
 	static boolean wipecache = false;
 	static boolean kernelinqueue = false;
-	static ArrayAdapter adapter;
+	static ArrayAdapter<String> adapter;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -143,7 +144,7 @@ public class Installed extends ListActivity {
 	    int pixels = (int) (45 * scale + 0.5f);
 	    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 	    actionBar.setBackgroundDrawable(mDrawable);
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+	    
 	    LinearLayout l = (LinearLayout) findViewById(R.id.bottombar);
         int startcolor = colors.getInt("buttonStart", context.getResources().getColor(R.color.buttonStart));
 		int endcolor = colors.getInt("buttonEnd", context.getResources().getColor(R.color.buttonEnd));
@@ -275,7 +276,7 @@ public class Installed extends ListActivity {
 		actionBar.setTitle(current);
 		if(!(current.equals("/mnt/sdcard") || current.equals(root))){
 			actionBar.removeAllActions();
-			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));	
+			actionBar.addAction(new Home(), colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)));	
      	}else{
      		actionBar.removeAllActions();
      	}
