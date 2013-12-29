@@ -80,9 +80,9 @@ public class Manage extends Activity {
 	    final float scale = context.getResources().getDisplayMetrics().density;
 	    int pixels = (int) (45 * scale + 0.5f);
 	    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
-	    actionBar.setBackgroundDrawable(mDrawable);
+	    /* actionBar.setBackgroundDrawable(mDrawable);
 	    actionBar.setHomeColor(colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
-	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
+	    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title))); */
         Bundle extras = getIntent().getExtras();
         slot = extras.getString("slot");
         systemimg = new File(u.getExternalDirectory()+"/BootManager/"+slot+"/system.img");
