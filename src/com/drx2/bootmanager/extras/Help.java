@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.drx2.bootmanager.R;
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.Action;
+import android.app.ActionBar;
+/* import com.markupartist.android.widget.ActionBar.Action; */
 
 public class Help extends Activity {
 	

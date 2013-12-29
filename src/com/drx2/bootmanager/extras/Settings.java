@@ -48,8 +48,8 @@ import com.drx2.bootmanager.utilities.CustomDialog;
 import com.drx2.bootmanager.utilities.ShellCommand;
 import com.drx2.bootmanager.utilities.Utilities;
 import com.drx2.bootmanager.utilities.ShellCommand.CommandResult;
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.Action;
+import android.app.ActionBar;
+/* import com.markupartist.android.widget.ActionBar.Action; */
 
 public class Settings extends PreferenceActivity {
 

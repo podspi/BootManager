@@ -18,8 +18,8 @@ import android.view.Window;
 import com.drx2.bootmanager.R;
 import com.drx2.bootmanager.extras.AmbilWarnaDialog.OnAmbilWarnaListener;
 import com.drx2.bootmanager.utilities.Utilities;
-import com.markupartist.android.widget.ActionBar;
-import com.markupartist.android.widget.ActionBar.Action;
+import android.app.ActionBar;
+/* import com.markupartist.android.widget.ActionBar.Action; */
 
 public class UITweaks extends PreferenceActivity {
 

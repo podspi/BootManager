@@ -62,7 +62,7 @@ import com.drx2.bootmanager.utilities.PhoneRomSetup;
 import com.drx2.bootmanager.utilities.ShellCommand;
 import com.drx2.bootmanager.utilities.ShellCommand.CommandResult;
 import com.drx2.bootmanager.utilities.Utilities;
-import com.markupartist.android.widget.ActionBar;
+import android.app.ActionBar;
 import com.markupartist.android.widget.ActionBar.Action;
 
 public class MainActivity extends FragmentActivity implements PageChangeListener {
