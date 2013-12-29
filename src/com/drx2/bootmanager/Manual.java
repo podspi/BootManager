@@ -21,8 +21,8 @@ import android.widget.Toast;
 
 import com.drx2.bootmanager.extras.Settings;
 import com.drx2.bootmanager.utilities.Utilities;
-import android.app.ActionBar;
-/* import com.markupartist.android.widget.ActionBar.Action; */
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
 
 public class Manual extends Activity implements OnClickListener {
 	Button b1;

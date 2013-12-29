@@ -16,8 +16,8 @@ import android.view.View;
 import android.view.Window;
 
 import com.drx2.bootmanager.R;
-import android.app.ActionBar;
-/* import com.markupartist.android.widget.ActionBar.Action; */
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
 
 public class About extends Activity {
 

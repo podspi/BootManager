@@ -9,8 +9,8 @@ import com.drx2.bootmanager.utilities.CustomProgressDialog;
 import com.drx2.bootmanager.utilities.ShellCommand;
 import com.drx2.bootmanager.utilities.Utilities;
 import com.drx2.bootmanager.utilities.ShellCommand.CommandResult;
-import android.app.ActionBar;
-/* import com.markupartist.android.widget.ActionBar.Action; */
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
 
 import android.app.Activity;
 import android.content.Context;

@@ -49,10 +49,8 @@ import com.drx2.bootmanager.utilities.CustomProgressDialog;
 import com.drx2.bootmanager.utilities.ShellCommand;
 import com.drx2.bootmanager.utilities.ShellCommand.CommandResult;
 import com.drx2.bootmanager.utilities.Utilities;
+import com.markupartist.android.widget.ActionBar;
 import com.markupartist.android.widget.ActionBar.Action;
-
-import android.app.ActionBar;
-/* import com.markupartist.android.widget.ActionBar.Action; */
 
 public class Installed extends ListActivity {
 	 

@@ -35,8 +35,8 @@ import com.drx2.bootmanager.services.BackupRestoreService;
 import com.drx2.bootmanager.utilities.CustomDialog;
 import com.drx2.bootmanager.utilities.ShellCommand;
 import com.drx2.bootmanager.utilities.Utilities;
-import android.app.ActionBar;
-/* import com.markupartist.android.widget.ActionBar.Action; */
+import com.markupartist.android.widget.ActionBar;
+import com.markupartist.android.widget.ActionBar.Action;
 
 public class Restore extends ListActivity {
 	 
