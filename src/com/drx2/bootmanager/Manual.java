@@ -62,13 +62,13 @@ public class Manual extends Activity implements OnClickListener {
 	        ActionBar actionBar = (ActionBar) findViewById(R.id.actionbar);
 	        actionBar.setHomeAction(new Home());
 	        final SharedPreferences colors = getSharedPreferences(PREFS_DEVICE, 0);
-		   
+		    actionBar.setHomeColor(colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)));
 		    ShapeDrawable mDrawable = new ShapeDrawable(new RectShape());
 		    final float scale = context.getResources().getDisplayMetrics().density;
 		    int pixels = (int) (45 * scale + 0.5f);
 		    mDrawable.getPaint().setShader(new LinearGradient(0, 0, 0, pixels, colors.getInt("actionbarStart", getResources().getColor(R.color.actionbar_background_start)), colors.getInt("actionbarEnd", getResources().getColor(R.color.actionbar_background_end)), Shader.TileMode.REPEAT));
 		    actionBar.setBackgroundDrawable(mDrawable);
-		   
+		    actionBar.setTitleColor(colors.getInt("actionbarText", getResources().getColor(R.color.actionbar_title)));
 	        b1=(Button)findViewById(R.id.variable1);
 	    	b1.setOnClickListener(this);
 	    	b2=(Button)findViewById(R.id.variable2);
