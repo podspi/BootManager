@@ -418,7 +418,28 @@ public class Romswitcher extends Activity {
 		protected void onPostExecute(Void unused) {
 			SharedPreferences settings = context.getSharedPreferences(PREFS_DEVICE, 0);
 			String device = settings.getString("device", "");
-			if(device.equals("sholes")){
+			
+			//Added for SGS3 vzw
+			
+
+				if (new File(u.getExternalDirectory() + "/BootManager/" + slot + "/boot.img").exists())
+				{
+					flashbootSpecifyBootPartition(u.getExternalDirectory() + "/BootManager/" + slot + "/boot.img", "/dev/block/mmcblk0p7");
+				}else {
+					Toast.makeText(Romswitcher.this, "No ROM installed to " + slot, Toast.LENGTH_LONG).show();}
+			
+			//End Addition
+			
+			
+			/* Unneccessary for SGS3 d2vzw
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 * 
+			 
+			else if(device.equals("sholes")){
 				if (new File(u.getExternalDirectory() + "/BootManager/" + slot + "/boot.img").exists()){
 					recoveryInstall(slot);
 				} else {
@@ -446,6 +467,9 @@ public class Romswitcher extends Activity {
 					Toast.makeText(Romswitcher.this, "No ROM installed to " + slot, Toast.LENGTH_LONG).show();
 				}
 			}
+			
+			*/
+			
 			if(p!=null)p.dismiss();
 			Romswitcher.this.finish();
 		}       

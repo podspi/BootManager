@@ -1570,6 +1570,12 @@ public class Loader extends Activity{
 	}
 	
 	private String findlunfile(){
+		//This doesn't work for some reason but
+		//For the SGS3 it is /sys/devices/platform/msm_hsusb/driver/msm_hsusb/gadget/lun0/
+		return "/sys/devices/platform/msm_hsusb/driver/msm_hsusb/gadget/lun0/";
+		
+		
+		/*
 		try{
     		FileWriter fstream = new FileWriter(context.getFilesDir().getAbsolutePath() + "/command.sh");
     		BufferedWriter out = new BufferedWriter(fstream);
@@ -1581,8 +1587,11 @@ public class Loader extends Activity{
     	}
     	u.execCommand(context.getFilesDir().getAbsolutePath()+"/busybox chmod 755 "+context.getFilesDir().getAbsolutePath()+"/command.sh");
     	u.execCommand("chmod 755 "+context.getFilesDir().getAbsolutePath()+"/command.sh");
+    	u.log("Going to try:"+context.getFilesDir().getAbsolutePath()+"/command.sh" + "/system/xbin/busybox");
     	CommandResult find = s.su.runWaitFor(context.getFilesDir().getAbsolutePath()+"/command.sh "+context.getFilesDir().getAbsolutePath()+"/busybox");
-		if(find.stderr!=null){
+    	
+    	u.log("I'm running! after");
+    	if(find.stderr!=null){
 			u.log(find.stderr); 
 			new File(context.getFilesDir().getAbsolutePath() + "/command.sh").delete();
 		}
@@ -1590,7 +1599,7 @@ public class Loader extends Activity{
 			return find.stdout;
 		else
 			return null;
-		
+		*/
 	}
 	
 	private void askHboot(){

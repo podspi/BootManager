@@ -139,7 +139,15 @@ public class PhoneRomSetup {
 				}
 			} else {
 				try {
-					if(board.equals("sholes")){
+					
+					// Added for SGS3 d2vzw
+					if(board.equals("MSM8960")||board.equals("msm8960")){
+						u.execCommand(context.getFilesDir().getAbsolutePath() + "/busybox dd if=/dev/block/mmcblk0p7 of=" + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
+					}
+					// End addition
+					
+					
+					else if(board.equals("sholes")){
 						u.execCommand(context.getFilesDir().getAbsolutePath() + "/busybox dd if=/dev/block/mtdblock2 of=" + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
 					}else if(board.equals("aloha")||board.equals("buzz")){
 						u.execCommand(context.getFilesDir().getAbsolutePath() + "/morebinarys/dump_image boot " + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
@@ -186,7 +194,27 @@ public class PhoneRomSetup {
 							if(count > 5){
 								break;
 							}
-							if(board.equals("sholes")){
+							
+							
+							
+							//Added for SGS3 d2vzw
+							
+							
+							
+								u.execCommand(context.getFilesDir().getAbsolutePath() + "/busybox dd if=/dev/block/mmcblk0p7 of=" + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
+							
+							
+							
+							//End add
+							
+							
+						/* Unneccessary for SGS3 
+						 * 
+						 * 
+						 * 
+						 * 	
+						 
+							else if(board.equals("sholes")){
 								u.execCommand(context.getFilesDir().getAbsolutePath() + "/busybox dd if=/dev/block/mtdblock2 of=" + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
 							}else if(board.equals("aloha")){
 								CommandResult dumpboot = s.su.runWaitFor(context.getFilesDir().getAbsolutePath() + "/morebinarys/dump_image boot " + u.getExternalDirectory() + "/BootManager/phoneRom/boot.img");
@@ -227,6 +255,9 @@ public class PhoneRomSetup {
 								u.execCommand(context.getFilesDir().getAbsolutePath() + "busybox mv /data/local/tmp/boot.img "+u.getExternalDirectory()+"/BootManager/phoneRom/boot.img");
 								u.execCommand(context.getFilesDir().getAbsolutePath() + "busybox rm /data/local/tmp/boot.img");
 							}
+							
+						*/	
+							
 						}
 						if(board.equals("vigor")){
 							addBootimgtoUpdateRezound();
